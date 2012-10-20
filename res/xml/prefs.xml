@@ -43,7 +43,16 @@
   <CheckBoxPreference
       android:key="auto_space_on"
       android:title="@string/auto_space"
+      android:summary="@string/auto_space_summary"
       android:persistent="true"
+      />
+
+  <CheckBoxPreference
+      android:key="force_visible"
+      android:title="@string/force_visible"
+      android:summary="@string/force_visible_summary"
+      android:persistent="true"
+      android:defaultValue="true"
       />
 
   <CheckBoxPreference

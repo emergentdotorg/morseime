@@ -26,6 +26,7 @@ public class MorseIME extends LatinIME {
 
   private static final String PREF_WORDS_PER_MINUTE = "words_per_minute";
   private static final String PREF_AUTO_SPACE_ON = "auto_space_on";
+  private static final String PREF_FORCE_VISIBLE = "force_visible";
 
   private static final int WPM_MILLIS_EQUATION_NUMERATOR = 1200;
   private static final int CHAR_SEP_UNITS = 3;
@@ -34,8 +35,14 @@ public class MorseIME extends LatinIME {
 
   private DitDahHandlerCallback m_ditDahHandlerCallback = new DitDahHandlerCallback();
 
+  private boolean m_forceVisible = true;
   private boolean m_autoSpace = false;
   private long m_wpm = 10;
+
+  @Override
+  public boolean onEvaluateInputViewShown() {
+    return m_forceVisible || super.onEvaluateInputViewShown();
+  }
 
   @Override
   public void onFinishInput() {
@@ -56,6 +63,7 @@ public class MorseIME extends LatinIME {
     super.loadSettings();
     // Get the settings preferences
     SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+    m_forceVisible = sp.getBoolean(PREF_FORCE_VISIBLE, true);
     m_autoSpace = sp.getBoolean(PREF_AUTO_SPACE_ON, false);
     m_wpm = sp.getInt(PREF_WORDS_PER_MINUTE, DEFAULT_WPM);
   }

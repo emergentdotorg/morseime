@@ -35,6 +35,12 @@
   <!-- Description for auto_space -->
   <string name="auto_space_summary">Automatically insert space between words</string>
 
+  <!-- Option to force the keyboard visible even in landscape mode on phones with hard keyboard, etc. -->
+  <string name="force_visible">Force visible</string>
+
+  <!-- Description for force_visible -->
+  <string name="force_visible_summary">Show keyboard even when hard keyboard is available</string>
+
   <!-- Option to provide vibrate/haptic feedback on keypress -->
   <string name="vibrate_on_keypress">Vibrate on keypress</string>
   <!-- Option to play back sound on keypress in soft keyboard -->

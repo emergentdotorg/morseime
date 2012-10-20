@@ -6,6 +6,8 @@
          Control Systems. -->
     <property file="local.properties" />
 
+    <property file="${user.home}/.android/local.properties" />
+
     <!-- The build.properties file can be created by you and is never touched
          by the 'android' tool. This is the place to change some of the default property values
          used by the Ant rules.

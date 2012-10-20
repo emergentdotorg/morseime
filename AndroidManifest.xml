@@ -1,10 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.emergent.android.morseime"
-          android:versionCode="2"
-          android:versionName="1.0.1"
+          android:versionCode="3"
+          android:versionName="1.0.2"
     >
 
   <!-- History:
+  1.0.2 [3]: 2010-03-10 Landscape mode fixes.
   1.0.1 [2]: 2010-03-09 Fix to respect all preference settings.
   1.0.0 [1]: 2010-03-09 Initial release.
    -->
