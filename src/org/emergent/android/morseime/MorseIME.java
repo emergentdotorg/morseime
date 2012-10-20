@@ -53,6 +53,7 @@ public class MorseIME extends LatinIME {
 
   @Override
   protected void loadSettings() {
+    super.loadSettings();
     // Get the settings preferences
     SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
     m_autoSpace = sp.getBoolean(PREF_AUTO_SPACE_ON, false);
